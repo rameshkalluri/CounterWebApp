@@ -12,5 +12,10 @@ pipeline {
 '''
       }
     }
+    stage('') {
+      steps {
+        git(url: 'https://github.com/rameshkalluri/CentOS-Dockerfiles.git', branch: 'master', poll: true)
+      }
+    }
   }
 }
