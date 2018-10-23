@@ -19,9 +19,9 @@ pipeline {
             git(url: 'https://github.com/rameshkalluri/CentOS-Dockerfiles.git', branch: 'master', poll: true)
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            git(url: 'git clone https://rameshkalluri@bitbucket.org/pragiti-git/hymetals-hybris-extensions.git', branch: 'master', poll: true)
+            git(url: 'https://rameshkalluri@bitbucket.org/pragiti-git/hymetals-hybris-extensions.git', branch: 'master', poll: true)
           }
         }
       }
