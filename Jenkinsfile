@@ -21,7 +21,7 @@ pipeline {
         }
         stage('error') {
           steps {
-            git(url: 'https://rameshkalluri@bitbucket.org/pragiti-git/hymetals-hybris-extensions.git', branch: 'master', poll: true)
+            git(url: 'https://rameshkalluri:Kramesh@143@bitbucket.org/pragiti-git/hymetals-hybris-extensions.git', branch: 'master', poll: true)
           }
         }
       }
