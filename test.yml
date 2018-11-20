@@ -1,5 +1,5 @@
 ---
- - host: all
+ - hosts: all
    become: true
    tasks:
    - copy: src=/var/lib/jenkins/workspace/Test/target/CounterWebApp.war dest=/webapps
