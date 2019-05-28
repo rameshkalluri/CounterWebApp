@@ -2,6 +2,6 @@
  - hosts: all
    become: yes
    become_user: root
-   become_method: sudo
+   become_method: su
    tasks:
    - copy: src=/var/lib/jenkins/workspace/Test/target/CounterWebApp.war dest=/webapps
