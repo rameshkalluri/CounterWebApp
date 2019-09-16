@@ -11,13 +11,3 @@ steps:
   image: java
   commands:
   - clean install
-pipeline:
-  notify:
-    image: drillster/drone-email
-    host: smtp.gmail.com
-    username: rrksrb@gmail.com
-    password: reddy143
-    from: reddi.ramesh@gmail.com
-+   attachment: build-result.xml
-    when:
-      status: [ changed, failure ]
