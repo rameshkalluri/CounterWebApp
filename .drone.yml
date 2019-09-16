@@ -1,4 +1,7 @@
 pipeline:
+  platform:
+     os: linux
+     arch: arm
   build:
     image: maven:3.5-alpine
     commands:
