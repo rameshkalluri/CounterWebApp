@@ -6,4 +6,8 @@ name: linux-amd64
 platform:
   arch: amd64
   os: linux
-
+steps:
+- name: test
+  image: java
+  commands:
+  - mvn clean install
