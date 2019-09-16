@@ -1,7 +1,13 @@
-pipeline:
-  platform:
-     os: linux
-     arch: arm
+---
+kind: pipeline
+type: docker
+name: linux-amd64
+
+platform:
+  arch: amd64
+  os: linux
+
+steps:
   build:
     image: maven:3.5-alpine
     commands:
