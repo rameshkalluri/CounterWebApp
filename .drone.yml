@@ -7,8 +7,3 @@ platform:
   arch: amd64
   os: linux
 
-steps:
-  build:
-    image: maven:3.5-alpine
-    commands:
-      - mvn clean package
