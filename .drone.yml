@@ -1,15 +1,14 @@
----
 kind: pipeline
 type: docker
-name: linux-amd64
-  
-build:
-  image: maven:3.3.3-jdk-8-onbuild
-  pull: true
-  commands:
-    - git log | head -n 20
-    - mvn clean install -Dgpg.skip=true
-    - if [ -z "CI_PULL_REQUEST" ] ; then
-        mvn deploy -s .settings.xml -Dgpg.skip=true;
-      fi
+name: default
 
+steps:
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+trigger:
+  branch:
+  - master
