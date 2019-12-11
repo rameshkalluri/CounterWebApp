@@ -1,20 +1,14 @@
 kind: pipeline
-name: defaultworkspace:
-  base: /go
-  path: src/github.com/yourname/go-drone-hello-worldsteps:
-  - name: test
-    image: golang
-    commands:
-      - go get
-      - go test  - name: build
-    image: golang
-    commands:
-      - go get
-      - go build -o output
-      - chmod +x output  - name: run
-    image: golang
-    commands:
-      - go get
-      - go build -o output
-      - chmod +x output
-      - ./output
+type: docker
+name: default
+
+steps:
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+trigger:
+  branch:
+  - master
