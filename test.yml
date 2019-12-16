@@ -1,7 +1,0 @@
----
- - hosts: al
-   become: yes
-   become_user: root
-   become_method: sudo
-   tasks:
-   - copy: src=/var/lib/jenkins/workspace/Test/target/CounterWebApp.war dest=/webapps
