@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: tomcat-service
 spec:
-  type: NodePort
+  type: LoadBalencer
   selector:
     app: tomcat
   ports:
