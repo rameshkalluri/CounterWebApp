@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: rrksrb/reddy:$(BUILD_NUMBER)
+        image: rrksrb/reddy:26
         ports:
         - containerPort: 8080
