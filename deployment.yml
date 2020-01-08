@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: rrksrb/reddy:26
+        image: {{{{IMAGE_URL}}
         ports:
         - containerPort: 8080
