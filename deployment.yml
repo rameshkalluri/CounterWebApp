@@ -26,19 +26,19 @@ kind: Deployment
 metadata:
   name: tomcat-deployment1
   labels:
-    app: tomcat
+    app: tomcat1
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tomcat
+      app: tomcat1
   template:
     metadata:
       labels:
-        app: tomcat
+        app: tomcat1
     spec:
       containers:
-      - name: tomcat
+      - name: tomcat1
         image: rrksrb/reddy:21
         imagePullPolicy: Always
         ports:
