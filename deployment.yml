@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: rrksrb/reddy:{{BUILD_NUMBER}}
+        image: rrksrb/reddy:21
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
