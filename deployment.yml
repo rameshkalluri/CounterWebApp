@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
---------------------------------------
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: rrksrb/reddy:21
+        image: rrksrb/reddy:{{BUILD_NUMBER}}
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080 
+        - containerPort: 8080
