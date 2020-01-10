@@ -7,5 +7,6 @@ First name:<br>
 Last name:<br>
 <input type="text" name="lastname">
 </form>
+ <button type="button">Click Me!</button>
 </body>
 </html>
