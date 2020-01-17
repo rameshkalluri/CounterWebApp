@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: rrksrb/reddy
+  repository: rrksrb/app
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
