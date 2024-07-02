@@ -9,11 +9,13 @@ pipeline {
         }
         stage("maven Build"){
             steps{
-                bat '''set MAVEN_HOME=C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.9.8
-
-                set PATH=%MAVEN_HOME%\\bin;%PATH%
-
-                mvn clean install'''
+                if (isUnix()) {
+                    sh " mvn clean install"
+                } else{
+                     bat '''set MAVEN_HOME=C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.9.8
+                    set PATH=%MAVEN_HOME%\\bin;%PATH%
+                    mvn clean install'''
+                }
             }
         }
         stage("deploy to container"){
