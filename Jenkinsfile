@@ -9,9 +9,9 @@ pipeline {
         }
         stage("maven Build"){
             steps{
-                if(isUnix()) {
+                if (isUnix()) {
                     sh " mvn clean install"
-                }else {
+                } else {
                      bat '''set MAVEN_HOME=C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.9.8
                     set PATH=%MAVEN_HOME%\\bin;%PATH%
                     mvn clean install'''
