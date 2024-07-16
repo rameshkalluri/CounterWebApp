@@ -7,6 +7,6 @@ if [ "$name"=="$n" ];
 then
    kubectl delete deployment tomcat-deploymet
 else
-        echo "no issues"
+        echo "no issues" # added comment 
 fi
 done
