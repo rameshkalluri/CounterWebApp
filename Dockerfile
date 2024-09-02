@@ -1,4 +1,4 @@
 FROM tomcat:8.0
-MAINTAINER ramesh
+MAINTAINER rameshkal
 COPY **/**.war /usr/local/tomcat/webapps/
 
