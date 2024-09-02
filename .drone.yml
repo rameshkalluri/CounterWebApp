@@ -1,7 +1,6 @@
 kind: pipeline
 type: docker
 name: default
-
 steps:
 - name: build
   image: golang
@@ -9,6 +8,3 @@ steps:
   - go build
   - go test
 
-trigger:
-  branch:
-  - master
