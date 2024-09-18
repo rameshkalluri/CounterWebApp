@@ -19,13 +19,13 @@ pipeline {
         }      
         stage('Docker tag') {
             steps {
-                bat 'docker tag  cw:latest rrksrb/cw:1'
+                bat 'docker tag  cw:latest rrksrb/cw:${env.BUILD_NUMBER}'
             }
         }      
         stage('publish to registry') {
             steps{
                 withDockerRegistry(credentialsId: 'docker', url: 'https://index.docker.io/v1/') {
-                   bat 'docker push rrksrb/cw:1'
+                   bat 'docker push rrksrb/cw:${env.BUILD_NUMBER}'
                 }
             }
         }
