@@ -16,13 +16,16 @@ pipeline {
             steps {
                 bat 'docker build -t cw .'
             }
-        }       
+        }      
+        stage('Docker tag') {
+            steps {
+                bat 'docker tag  cw:latest rrksrb/cw:1'
+            }
+        }      
         stage('publish to registry') {
             steps{
                 withDockerRegistry(credentialsId: 'docker', url: 'https://hub.docker.com/') {
-                   bat 'docker tag cw:latest  rrksrb/cw:1
-                        docker push rrksrb/cw:1
-                    '
+                   bat 'docker push rrksrb/cw:1'
                 }
             }
         }
