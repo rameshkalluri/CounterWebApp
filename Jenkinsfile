@@ -24,7 +24,7 @@ pipeline {
         }      
         stage('publish to registry') {
             steps{
-                withDockerRegistry(credentialsId: 'docker', url: 'https://registry.hub.docker.com') {
+                withDockerRegistry(credentialsId: 'docker', url: 'docker.io') {
                    bat 'docker push rrksrb/cw:1'
                 }
             }
