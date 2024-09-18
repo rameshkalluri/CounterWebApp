@@ -12,5 +12,10 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
+        stage('Docker build') {
+            steps {
+                bat 'docker build -t cw .'
+            }
+        }        
     }
 }
