@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent aws
     
     stages {
         stage("Maven Build") {
