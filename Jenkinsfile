@@ -1,5 +1,7 @@
 pipeline {
-    agent aws
+      agent { 
+        label 'aws'
+    }
     
     stages {
         stage("Maven Build") {
