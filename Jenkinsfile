@@ -3,11 +3,6 @@ pipeline {
 
     
     stages {
-        stage("clone Repo") {
-            steps{
-                git 'https://github.com/rameshkalluri/CounterWebApp.git'
-            }
-        }
         stage("Maven Build") {
             steps{
                 sh 'mvn clean install'
