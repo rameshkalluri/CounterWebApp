@@ -6,7 +6,4 @@ steps:
   image: golang
   commands:
   - go build
-  - go ramesh
-  - go anil
-  - go niharika
 
